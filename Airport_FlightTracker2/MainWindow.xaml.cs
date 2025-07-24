@@ -81,6 +81,7 @@ namespace Airport_FlightTracker2
                 //Allows your program to launch other apps/files/url's
                 Process.Start(new ProcessStartInfo("notepad.exe", filePath) 
                 { UseShellExecute = false });
+                //This shows how we can just open a simple empty notepad, since no filepath is given it opens empty notepad
                 Process.Start("notepad.exe");
             }
             else
