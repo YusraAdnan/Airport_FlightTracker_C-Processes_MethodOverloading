@@ -56,27 +56,29 @@ namespace Airport_FlightTracker2
         {
             string line = $"{name}, {seat}, {time}, {status}";
 
-            labelLoggingPending.Text = "Logging boarded passenger data to the text file";
+            labelLoggingPending.Text = "Writing to the text file....";
             await Task.Delay(5000);
             await File.AppendAllTextAsync(filePath, line + Environment.NewLine);
-            labelLoggingPending.Text = "Logging Complete!";
+            labelLoggingPending.Text = "Writing Complete!";
         }
 
         //Overloaded method for cancellation, without timestamp
         private async Task WriteToFileAsync(string name, string seat, string status)
         {
             string line = $"{name},{seat},{status}";
-            labelLoggingPending.Text = "Logging Cancelled passenger data to the text file";
+            labelLoggingPending.Text = "Writing to the text file....";
             await Task.Delay(5000);
             await File.AppendAllTextAsync(filePath, line + Environment.NewLine);
-            labelLoggingPending.Text = "Logging Complete!";
+            labelLoggingPending.Text = "Writing Complete!";
 
         }
         //opening external process (notepad, with a specific filepath to it) 
         private void btnViewFlight_Click(object sender, RoutedEventArgs e)
         {
+            
             if (File.Exists(filePath))
-            {
+            {  
+                //Allows your program to launch other apps/files/url's
                 Process.Start(new ProcessStartInfo("notepad.exe", filePath) 
                 { UseShellExecute = false });
                 Process.Start("notepad.exe");
@@ -92,7 +94,10 @@ namespace Airport_FlightTracker2
         {
             Process.Start(new ProcessStartInfo(
             "https://www.emirates.com/za/english/before-you-fly/visa-passport-information/")
-            { UseShellExecute = true });
+
+            /*set to true because we are trying to launch a non executable url and we want 
+             * to launch it with the default program assigned to it*/
+            { UseShellExecute = true }); 
         }
     }
 }

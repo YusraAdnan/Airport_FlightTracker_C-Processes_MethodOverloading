@@ -32,7 +32,7 @@
             <Button x:Name="btnViewFlight" Content="View Flight Details" Width="118" Height="30" Canvas.Left="-47" Canvas.Top="74" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnViewFlight_Click"/>
             <Button Name="btnViewCancelled" Content="View Cancelled Seats" Width="150" Height="30" Canvas.Left="105" Canvas.Top="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Button x:Name="btnBoardedAsync" Content="Boarded Async" Width="100" Height="30" Canvas.Left="-232" Canvas.Top="74" Click="btnBoardedAsync_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button x:Name="btnOpenWebsite" Content="View Details on Website" Width="150" Height="30" Canvas.Left="105" Canvas.Top="74" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnOpenWebsite_Click" />
+            <Button x:Name="btnOpenWebsite" Content="View Details on Website" Width="150" Height="30" Canvas.Left="105" Canvas.Top="74" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnOpenWebsite_Click" />
 
         </Canvas>
         <TextBlock x:Name="labelLoggingPending" Grid.Row="4" VerticalAlignment="Top" Margin="66,3,46,0" Text="" Grid.ColumnSpan="3" Foreground="#FFF31515" FontSize="16" FontWeight="Bold"/>
